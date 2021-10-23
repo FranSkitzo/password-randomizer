@@ -12,3 +12,5 @@ A simple password generator that allows you to:
 
 
 ![Screenshot of application](/Develop/assets/images/generator-screenshot.png "screenshot of application")
+
+[Link to deployed page]( https://franskitzo.github.io/password-randomizer/)
