@@ -9,13 +9,41 @@ function generatePassword() {
 // Store user selections
   var resultArray = [];
   var userArray = [];
+
+  uppercaseArray[1]
+
 // Window alerts 
-  var charCount = prompt("How long do you want your password to be?", "Range: 8 to 128");
+  var charCount = prompt("How long do you want your password to be? Range of 8 to 128 characters");
   var optNumber = confirm("Do you want numbers?");
   var upperLetters = confirm("Do you want Uppercases?");
   var lowerLetters = confirm("Do you want Lowercases?");
-  var
+  var charSpecial = confirm("Do you want special Characters in your password?")
 
+
+  // Setting conditions to concatenate results
+  if (optNumber) {
+    resultArray = resultArray.concat(numbArray);
+  }
+
+  if (upperLetters) {
+    resultArray = resultArray.concat(uppercaseArray);
+  }
+
+  if (lowerLetters) {
+    resultArray =  resultArray.concat(lowercaseArray);
+  }
+
+  if (charSpecial) {
+    resultArray = resultArray.concat(characterArray);
+  }
+
+  console.log(resultArray)
+
+  for (var i = 0; i < charCount; i++) {
+    userArray.push (resultArray[Math.floor(Math.random() * resultArray.length)]);
+  }
+
+  return userArray.join("");
 }
 
 // Get references to the #generate element
